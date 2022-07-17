@@ -182,9 +182,10 @@ export default class BeforeAfter {
     if (this.clickTransition) {
       this.sliderEl.style.transition = `left ${this.clickTransitionDuration}ms`;
       this.beforeImageContainerEl.style.transition = `width ${this.clickTransitionDuration}ms`;
+      this.moveSliderTo(this.getCursorPositionPercentage(e));
+    } else {
+      this.moveSliderTo(this.getCursorPositionPercentage(e));
     }
-
-    this.moveSliderTo(this.getCursorPositionPercentage(e));
   }
 
   private slideEnd() {
