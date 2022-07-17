@@ -1,0 +1,104 @@
+.before-after {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+}
+.before-after img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.before-after__before-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(50%);
+  overflow: hidden;
+  z-index: 1;
+}
+.before-after__comparison-slider-custom {
+  position: absolute;
+  height: 350px;
+  left: 200px;
+  top: 0;
+  z-index: 10;
+  cursor: col-resize;
+}
+.before-after__comparison-slider {
+  position: absolute;
+  background-color: white;
+  width: 4px;
+  height: calc(100% - 4px);
+  left: calc(50%);
+  top: 0;
+  z-index: 10;
+  cursor: col-resize;
+}
+[data-ba-element="slider"] {
+  position: absolute;
+  cursor: col-resize;
+  left: calc(50%);
+  top: 0;
+  z-index: 10;
+}
+.before-after__comparison-slider::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 400px;
+  height: calc(100% - 4px);
+  z-index: 999;
+}
+
+.before-after__comparison-slider::after {
+  position: absolute;
+  background-color: white;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: col-resize;
+}
+
+.before-after__text {
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.before-after__text--top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: max-content;
+}
+.before-after__text--bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: max-content;
+}
+.before-after__text--top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: max-content;
+}
+.before-after__text--bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: max-content;
+}

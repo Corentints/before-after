@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@corentints/before-after</title>
+    <script src="https://cdn.jsdelivr.net/npm/@corentints/before-after@latest/dist/before-after.umd.min.js"></script>
+    <style>
+      #before-after img {
+        width: 90vw;
+        height: auto;
+      }
+
+      @media screen and (min-width: 768px) {
+        #before-after img {
+          width: 50vw;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="before-after">
+      <img src="./assets/before.png" alt="Squirtle" />
+      <img src="./assets/after.png" alt="Squirtle with sunglasses" />
+    </div>
+    <script>
+      const rootElement = document.querySelector("#before-after");
+
+      const beforeAfterElement = new BeforeAfter({
+        rootElement,
+        allowClick: true,
+        clickTransitionDuration: 1000,
+        defaultSliderPosition: 45,
+        topLeftText: "Before",
+        topRightText: "After",
+      });
+    </script>
+  </body>
+</html>
