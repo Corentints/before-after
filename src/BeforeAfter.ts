@@ -71,6 +71,9 @@ export default class BeforeAfter {
       throw new Error('[BeforeAfter] Before and after images must be defined');
     }
 
+    this.beforeImageEl.setAttribute('draggable', 'false');
+    this.afterImageEl.setAttribute('draggable', 'false');
+
     const customSliderElement = rootElement.querySelector(
       'div [data-ba-element="slider"]',
     ) as HTMLDivElement | null;
