@@ -10,6 +10,7 @@
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  max-width: unset;
 }
 .before-after__before-image-wrapper {
   position: absolute;
@@ -27,16 +28,6 @@
   z-index: 10;
   cursor: col-resize;
 }
-.before-after__comparison-slider {
-  position: absolute;
-  background-color: white;
-  width: 4px;
-  height: calc(100% - 4px);
-  left: calc(50%);
-  top: 0;
-  z-index: 10;
-  cursor: col-resize;
-}
 [data-ba-element="slider"] {
   position: absolute;
   cursor: col-resize;
@@ -44,7 +35,60 @@
   top: 0;
   z-index: 10;
 }
-.before-after__comparison-slider::before {
+.before-after__comparison-slider {
+  position: absolute;
+  width: 4px;
+  height: calc(100% - 4px);
+  left: calc(50%);
+  top: 0;
+  z-index: 10;
+  cursor: col-resize;
+}
+.before-after__comparison-slider::before,
+.before-after__comparison-slider::after {
+  height: calc(50% - 20px);
+  background-color: #fff;
+  width: 4px;
+  content: "";
+  position: absolute;
+}
+.before-after__comparison-slider::after {
+  bottom: 0;
+}
+.before-after__comparison-slider-arrows {
+  position: relative;
+  border: 4px solid white;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(255 255 255/0.4);
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  backdrop-filter: blur(10px);
+}
+.before-after__comparison-slider-arrows::before,
+.before-after__comparison-slider-arrows::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  border-color: #fff;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+.before-after__comparison-slider-arrows::before {
+  transform: translateY(-50%) rotate(-135deg);
+  left: 5px;
+}
+.before-after__comparison-slider-arrows::after {
+  transform: translateY(-50%) rotate(45deg);
+  right: 5px;
+}
+
+/* .before-after__comparison-slider::before {
   content: "";
   position: absolute;
   left: -5px;
@@ -65,13 +109,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: col-resize;
-}
-
+} */
 .before-after__text {
-  font-size: 12px;
+  font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 5px 10px;
+  padding: 10px 20px;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;

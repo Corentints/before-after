@@ -83,6 +83,11 @@ export default class BeforeAfter {
     } else {
       this.sliderEl = document.createElement('div');
       this.sliderEl.className = 'before-after__comparison-slider';
+
+      const sliderArrows = document.createElement('div');
+      sliderArrows.className = 'before-after__comparison-slider-arrows';
+      this.sliderEl.appendChild(sliderArrows);
+
       this.rootEl.insertAdjacentElement('afterbegin', this.sliderEl);
     }
 
