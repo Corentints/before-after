@@ -1,6 +1,6 @@
 {
   "name": "@corentints/before-after",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Customizable image comparison library",
   "main": "dist/before-after.es.js",
   "module": "dist/before-after.es.js",
