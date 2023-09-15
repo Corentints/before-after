@@ -10,7 +10,7 @@ specifiers:
   eslint-plugin-import: ^2.26.0
   typescript: ^4.7.4
   vite: ^2.9.9
-  vite-plugin-css-injected-by-js: ^1.5.1
+  vite-plugin-css-injected-by-js: ^3.0.0
   vitest: ^0.18.0
 
 devDependencies:
@@ -23,7 +23,7 @@ devDependencies:
   eslint-plugin-import: 2.26.0_rywvbqnelbznwddhxv2glfjuay
   typescript: 4.7.4
   vite: 2.9.14
-  vite-plugin-css-injected-by-js: 1.5.1_vite@2.9.14
+  vite-plugin-css-injected-by-js: 3.3.0_vite@2.9.14
   vitest: 0.18.0
 
 packages:
@@ -2072,8 +2072,8 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vite-plugin-css-injected-by-js/1.5.1_vite@2.9.14:
-    resolution: {integrity: sha512-D/xdY9sWijCdoIbp5qiUejVShyTt1omzeyMwoyXWSuaXc9d/RtWdv/v7iv+i8F0KavWhK+U7nmOuxliyeFR+pA==}
+  /vite-plugin-css-injected-by-js/3.3.0_vite@2.9.14:
+    resolution: {integrity: sha512-xG+jyHNCmUqi/TXp6q88wTJGeAOrNLSyUUTp4qEQ9QZLGcHWQQsCsSSKa59rPMQr8sOzfzmWDd8enGqfH/dBew==}
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:
